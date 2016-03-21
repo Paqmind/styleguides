@@ -6,25 +6,25 @@ Relevant topics. Discuss and compare different approaches to backup our choices.
 
 Nothing here is a dogma. We keep an option to reconsider everything as we discover more arguments.
 
-#### Rule 1
+### Rule 1
 
 Write and style code in a language-agnostic way. Portability of knowledge and reading / writing skills is a goal.
 
-#### Rule 2
+### Rule 2
 
 Dealing with choice in **Rule 1**, prefer syntax and semantics of better languages (Haskell, etc.).
 
-#### Rule 3
+### Rule 3
 
 Avoid complicated grammar rules.
 
 ## Applications
 
-#### `if` vs `switch`
+### `if` vs `switch`
 
 Prefer `if` over `switch` by default.
 
-#### `let` vs `const`
+### `let` vs `const`
 
 `const` implies immutability which it does not provide (so lies)
 
@@ -61,18 +61,18 @@ your priorities.
 Two statements for variable assignment violate **Rule 1**.<br/>
 `const` violates **Rule 2**, `let` – satisfies.
 
-#### Double quote vs Single quote
+### Double quote vs Single quote
 
 Double quote is in-line with Haskell, Elm, Clojure conventions. Single quote is not.<br/>
 Following **Rule-2** we use double quote as default one. Single quote is used where it's convenient `"double-quoted-string"`.
 
-#### Semicolons
+### Semicolons
 
 There are much more rules for "where you need to put semicolon" than 
 rules for "where you can't omit semicolon". Following **Rule 3** we discard semicolons
 from our code. No problems so far :)
 
-#### Currying
+### Currying
 
 We use `curry` (with `=>`) as a replacement for `function` word almost everywhere.<br/>
 It's just a matter of reading / writing habits.
@@ -87,7 +87,7 @@ you'll never want to go that way.
 
 Rule of thumb: "named args" are for kids.
 
-#### Triple equals
+### Triple equals
 
 It's a commonplace to get advices like *always use `===`, never use `==`*. 
 So you'll see `typeof foo === "function"` like if `typeof` could return something besides `String`.
@@ -111,44 +111,44 @@ loosing the whole picture.
 
 We recommend to use `==` where it's appropriate.
 
-#### Immutability
+### Immutability
 
 At least 7 approaches are possible here.
 
-##### 1. Defensive copying
+#### 1. Defensive copying
 
 ```js
 let ys = xs.slice(0, xs.length)
 ys.splice(...)
 ```
 
-#### Benefits
+##### Benefits
 
 Not found
 
-#### Drawbacks
+##### Drawbacks
 
 * exta code 
 * clutter 
 * error-prone
 
-##### 2. Manual freezing
+#### 2. Manual freezing
 
 ```js
 Object.freeze({name: "Jack"})
 ```
 
-#### Benefits
+##### Benefits
 
-* keeps native API 
+* preserves native API 
 
-#### Drawbacks
+##### Drawbacks
 
 * exta code 
 * clutter 
 * error-prone
 
-##### 3. Auto freezing
+#### 3. Auto freezing
 
 [**Seamless-Immutable**](https://github.com/rtfeldman/seamless-immutable)
 
@@ -157,11 +157,11 @@ let xs = Immutable(["I'm", "immutable"]);
 xs[0] = "let's verify" // error
 ```
 
-#### Benefits
+##### Benefits
 
-* keeps native API 
+* preserves native API 
 
-#### Drawbacks
+##### Drawbacks
 
 * exta code (for little gain)
 * clutter 
@@ -179,21 +179,21 @@ map2.get('b'); // 50
 
 [**Mori**](https://github.com/swannodette/mori)
 
-#### Benefits
+##### Benefits
 
 * memory usage (real win)
 
-#### Drawbacks
+##### Drawbacks
 
 * specific API (unnecessary hard to combine with other libs) 
 * performance
 * negatively affects bundle size (such libs are relatively heavy)
 
-##### 4. Persistent datastructures (auto)
+#### 4. Persistent datastructures (auto)
 
 Not available in JS.
 
-##### 5. Immutability as a side-effect 
+#### 5. Immutability as a side-effect 
 
 Some libraries can freeze data in addition to their primary actions (type validation, etc.). 
 
@@ -208,16 +208,16 @@ let person = Person({name: "John"})
 person.name = "Jack" // error
 ```
 
-#### Benefits
+##### Benefits
 
-* keeps native API 
+* preserves native API 
 * immutability as a bonus
 
-#### Drawbacks
+##### Drawbacks
 
 * limited usage (you can't generally get **total** immutability by this method)
 
-##### 6. "Just never mutate" (manual)
+#### 6. "Just never mutate" (manual)
 
 ```js
 xs.concat([4])
@@ -225,18 +225,18 @@ xs.concat([4])
 xs.push(4)
 ```
 
-#### Benefits
+##### Benefits
 
-* keeps native API 
+* preserves native API 
 * no additional deps / conditions
 
-#### Drawbacks
+##### Drawbacks
 
 * exta code 
 * clutter 
 * error-prone
 
-##### 7. "Just never mutate" (auto)
+#### 7. "Just never mutate" (auto)
 
 [**Ramda**](http://ramdajs.com/)
 
@@ -245,12 +245,12 @@ let xs = [1, 2, 3]
 let ys = drop(1, xs) // xs is untouched
 ```
  
-#### Benefits
+##### Benefits
 
-* keeps native API 
+* preserves native API 
 * immutability as a bonus
 
-#### Drawbacks
+##### Drawbacks
 
 * negatively affects bundle size (effect will significantly reduce with upcoming [tree shaking](www.2ality.com/2015/12/webpack-tree-shaking.html))
 
