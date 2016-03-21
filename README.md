@@ -56,7 +56,7 @@ depending on them being overriden or not down the code. If you remove `if` which
 the latter to become `const`? If you have time to bother yourself with such things you probably need to reconsider
 your priorities. 
 
-Besides that. Two statements for variable assignment violate **Rule 1**.<br/>
+Two statements for variable assignment violate **Rule 1**.<br/>
 `const` violates **Rule 2**, `let` – satisfies.
 
 #### Double quote vs Single quote
