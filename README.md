@@ -1,8 +1,10 @@
 # Styleguides
 
-Our JS styleguides explained. Not a dogma – it may change gradually.
+Our JS styleguides explained. 
 
 ## Rules
+
+Nothing here is a dogma. We keep an option to reconsider everything as we discover more arguments.
 
 #### Rule 1
 
@@ -84,4 +86,19 @@ to specify their "names" at call time again. And once you start typing functions
 you'll never want to go that way.
 
 Rule of thumb: "named args" are for kids.
+
+#### Triple equals
+
+It's a commonplace to get advices like *always use `===`, never use `==`*. 
+So you'll see `typeof foo === "function"` like if `typeof` could return something besides `String`...
+It has become a dogma-like and dogmas generally make you a worse programmer.
+
+The thing is: you always need to think of types. Even in dynamic langs like JS. Than if something can be of unpredictable type (which is a warning by itself) you use manual type coercion (`String(x) == String(y)`). This is how you would behave in almost all other languages (**Rule 1** and **Rule 2**).
+
+Besides that. There are no strict equivalents for `>`, `>=`, `<`, `<=`. 
+Being simple, consistent and language agnostic is always better than trumpeting minor details
+loosing the whole picture.
+
+We recommend to use `==` where it's appropriate.
+
 
