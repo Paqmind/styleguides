@@ -186,7 +186,6 @@ map2.get('b'); // 50
 ##### Drawbacks
 
 * specific API (unnecessary hard to combine with other libs) 
-* performance
 * negatively affects bundle size (such libs are relatively heavy)
 
 #### 4. Persistent datastructures (auto)
