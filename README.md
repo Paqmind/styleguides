@@ -166,7 +166,7 @@ xs[0] = "let's verify" // error
 * exta code (for little gain)
 * clutter 
 
-##### 4. Persistent datastructures (manual)
+#### 4. Persistent datastructures (manual)
 
 [**ImmutableJS**](https://github.com/facebook/immutable-js)
 
