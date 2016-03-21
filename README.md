@@ -1,6 +1,6 @@
 # Styleguides
 
-Our JS styleguides explained. 
+Relevant topics. Discuss and compare different approaches to backup our choices.
 
 ## Rules
 
@@ -102,7 +102,8 @@ Comparison rules in JS are fundamentally broken (in mathematical sense).
 [] === [] // false
 ```
 
-You totally can't fix that fact by "always use `===`" rule. 
+You totally can't fix that fact by "always use `===`" rule. Like previously mentioned palliatives (`const`)
+this one pushes you into "safety" mindset which is a self deceit.
 
 Besides that. There are no strict equivalents for `>`, `>=`, `<`, `<=`. 
 Being simple, consistent and language agnostic is always better than trumpeting minor details
@@ -110,3 +111,122 @@ loosing the whole picture.
 
 We recommend to use `==` where it's appropriate.
 
+#### Immutability
+
+You can divide solutions for this aspect into 7 (at least) groups.
+
+##### 1. Defensive copying
+
+```js
+let ys = xs.slice(0, xs.length)
+ys.splice(...)
+```
+
+#### Benefits
+
+Not found
+
+#### Drawbacks
+
+* exta code 
+* clutter 
+* error-prone
+
+##### 2. Manual freezing
+
+```js
+Object.freeze({name: "Jack"})
+```
+
+#### Benefits
+
+* keeps native API 
+
+#### Drawbacks
+
+* exta code 
+* clutter 
+* error-prone
+
+##### 3. Auto freezing
+
+[seamless-immutable](https://github.com/rtfeldman/seamless-immutable)
+
+#### Benefits
+
+* keeps native API 
+
+#### Drawbacks
+
+* exta code (for little gain)
+* clutter 
+
+##### 4. Persistent datastructures
+
+A builtin in functional languages (Haskell, Clojure...).
+
+[ImmutableJS](https://github.com/facebook/immutable-js)
+
+[Mori](https://github.com/swannodette/mori)
+
+#### Benefits
+
+* memory usage for big datasets (games)
+
+#### Drawbacks
+
+* specific API (unnecessary hard to combine with other libs) 
+* performance
+* negatively affects bundle size (such libs are relatively heavy)
+
+##### 5. Immutability as a side-effect 
+
+Some libraries can apply `Object.freeze` in addition to their main purpose stuff (type validation, etc.). 
+
+[Tcomb](https://github.com/gcanti/tcomb)
+
+#### Benefits
+
+* keeps native API 
+* immutability as a bonus
+
+#### Drawbacks
+
+* specific API (unnecessary hard to combine with other libs) 
+* performance
+* negatively affects bundle size (such libs are relatively heavy)
+
+##### 6. Manual "just never mutate"
+
+```js
+xs.concat([4])
+// instead of
+xs.push(4)
+```
+
+#### Benefits
+
+* keeps native API 
+* no additional deps / conditions
+
+#### Drawbacks
+
+* exta code 
+* clutter 
+* error-prone
+
+##### 7. Auto "just never mutate"
+
+[Ramda](http://ramdajs.com/)
+ 
+#### Benefits
+
+* keeps native API 
+* immutability as a bonus
+
+#### Drawbacks
+
+* negatively affects bundle size (effect will significantly reduce with upcoming [tree shaking](www.2ality.com/2015/12/webpack-tree-shaking.html))
+
+Our favorites are **5** and **7**. Use **4** when you have to deal with heavy memory load.
+Never use **1**.
