@@ -4,7 +4,7 @@
 
 #### Rule 1
 
-Write and style code in a language-agnostic way
+Write and style code in a language-agnostic way.
 
 #### Rule 2
 
@@ -12,7 +12,7 @@ Dealing with choice in **Rule 1**, prefer syntax and semantics of better languag
 
 #### Rule 3
 
-Avoid complicated grammar rules
+Avoid complicated grammar rules.
 
 ## Applications
 
