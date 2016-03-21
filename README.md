@@ -6,7 +6,7 @@ Our JS styleguides explained. Not a dogma – it may change gradually.
 
 #### Rule 1
 
-Write and style code in a language-agnostic way. Knowledge portability and reading / writing skills portability is a goal.
+Write and style code in a language-agnostic way. Portability of knowledge and reading / writing skills is a goal.
 
 #### Rule 2
 
