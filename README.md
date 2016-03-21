@@ -95,10 +95,18 @@ It has become a dogma-like and dogmas generally make you a worse programmer.
 
 The thing is: you always need to think of types. Even in dynamic langs like JS. Than if something can be of unpredictable type (which is a warning by itself) you use manual type coercion (`String(x) == String(y)`). This is how you would behave in almost all other languages (**Rule 1** and **Rule 2**).
 
+Comparison rules in JS are fundamentally broken (in mathematical sense). 
+
+```js
+[] == []  // false
+[] === [] // false
+```
+
+You totally can't fix that fact by "always use `===`" rule. 
+
 Besides that. There are no strict equivalents for `>`, `>=`, `<`, `<=`. 
 Being simple, consistent and language agnostic is always better than trumpeting minor details
 loosing the whole picture.
 
 We recommend to use `==` where it's appropriate.
-
 
