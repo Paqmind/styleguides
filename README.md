@@ -57,8 +57,8 @@ Besides that. Two statements for variable assignment violate **Rule 1**.<br/>
 
 #### Double quote vs Single quote
 
-Double quote is in-line with Haskell, Elm, Clojure conventions.
-Single quote is not. Following **Rule-2** we use double quote whenever possible.
+Double quote is in-line with Haskell, Elm, Clojure conventions. Single quote is not.<br/>
+Following **Rule-2** we use double quote whenever possible.
 
 #### Semicolons
 
