@@ -1,4 +1,6 @@
-# styleguides
+# Styleguides
+
+Our JS styleguides explained. Not a dogma – it may change gradually.
 
 ## Rules
 
