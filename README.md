@@ -6,7 +6,7 @@ Our JS styleguides explained. Not a dogma – it may change gradually.
 
 #### Rule 1
 
-Write and style code in a language-agnostic way.
+Write and style code in a language-agnostic way. Knowledge portability and reading / writing skills portability is a goal.
 
 #### Rule 2
 
@@ -58,7 +58,7 @@ Besides that. Two statements for variable assignment violate **Rule 1**.<br/>
 #### Double quote vs Single quote
 
 Double quote is in-line with Haskell, Elm, Clojure conventions. Single quote is not.<br/>
-Following **Rule-2** we use double quote whenever possible.
+Following **Rule-2** we use double quote as default one. Single quote is used where it's convenient `"double-quoted-string"`.
 
 #### Semicolons
 
