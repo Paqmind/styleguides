@@ -152,6 +152,11 @@ Object.freeze({name: "Jack"})
 
 [seamless-immutable](https://github.com/rtfeldman/seamless-immutable)
 
+```
+let xs = Immutable(["I'm", "immutable"]);
+xs[0] = "let's verify" // error
+```
+
 #### Benefits
 
 * keeps native API 
@@ -167,11 +172,18 @@ A builtin in functional languages (Haskell, Clojure...).
 
 [ImmutableJS](https://github.com/facebook/immutable-js)
 
+```js
+let map1 = Immutable.Map({a:1, b:2, c:3});
+let map2 = map1.set('b', 50);
+map1.get('b'); // 2
+map2.get('b'); // 50
+```
+
 [Mori](https://github.com/swannodette/mori)
 
 #### Benefits
 
-* memory usage for big datasets (games)
+* memory usage (real win)
 
 #### Drawbacks
 
@@ -181,9 +193,18 @@ A builtin in functional languages (Haskell, Clojure...).
 
 ##### 5. Immutability as a side-effect 
 
-Some libraries can apply `Object.freeze` in addition to their main purpose stuff (type validation, etc.). 
+Some libraries can freeze data in addition to their primary actions (type validation, etc.). 
 
 [Tcomb](https://github.com/gcanti/tcomb)
+
+```js
+let Person = T.struct({
+  name: T.String,         
+}, 'Person');
+
+let person = Person({name: "John"})
+person.name = "Jack" // error
+```
 
 #### Benefits
 
@@ -192,9 +213,7 @@ Some libraries can apply `Object.freeze` in addition to their main purpose stuff
 
 #### Drawbacks
 
-* specific API (unnecessary hard to combine with other libs) 
-* performance
-* negatively affects bundle size (such libs are relatively heavy)
+* limited usage (you can't generally get **total** immutability by this method)
 
 ##### 6. Manual "just never mutate"
 
@@ -218,6 +237,11 @@ xs.push(4)
 ##### 7. Auto "just never mutate"
 
 [Ramda](http://ramdajs.com/)
+
+```js
+let xs = [1, 2, 3]
+let ys = drop(1, xs) // xs is untouched
+```
  
 #### Benefits
 
@@ -228,5 +252,5 @@ xs.push(4)
 
 * negatively affects bundle size (effect will significantly reduce with upcoming [tree shaking](www.2ality.com/2015/12/webpack-tree-shaking.html))
 
-Our favorites are **5** and **7**. Use **4** when you have to deal with heavy memory load.
+Our favorites are **5** and **7**. Try **4** when you have to deal with heavy memory load (games, graphics).
 Never use **1**.
