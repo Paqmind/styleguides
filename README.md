@@ -166,9 +166,7 @@ xs[0] = "let's verify" // error
 * exta code (for little gain)
 * clutter 
 
-##### 4. Persistent datastructures
-
-A builtin in functional languages (Haskell, Clojure...).
+##### 4. Persistent datastructures (manual)
 
 [**ImmutableJS**](https://github.com/facebook/immutable-js)
 
@@ -190,6 +188,10 @@ map2.get('b'); // 50
 * specific API (unnecessary hard to combine with other libs) 
 * performance
 * negatively affects bundle size (such libs are relatively heavy)
+
+##### 4. Persistent datastructures (auto)
+
+Not available in JS.
 
 ##### 5. Immutability as a side-effect 
 
@@ -215,7 +217,7 @@ person.name = "Jack" // error
 
 * limited usage (you can't generally get **total** immutability by this method)
 
-##### 6. Manual "just never mutate"
+##### 6. "Just never mutate" (manual)
 
 ```js
 xs.concat([4])
@@ -234,7 +236,7 @@ xs.push(4)
 * clutter 
 * error-prone
 
-##### 7. Auto "just never mutate"
+##### 7. "Just never mutate" (auto)
 
 [**Ramda**](http://ramdajs.com/)
 
