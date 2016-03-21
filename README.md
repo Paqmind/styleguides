@@ -18,7 +18,11 @@ Avoid complicated grammar rules.
 
 ## Applications
 
-#### `const` vs `let`
+#### `if` vs `switch`
+
+Prefer `if` over `switch` by default.
+
+#### `let` vs `const`
 
 `const` implies immutability which it does not provide (so lies)
 
@@ -65,10 +69,6 @@ Following **Rule-2** we use double quote as default one. Single quote is used wh
 There are much more rules for "where you need to put semicolon" than 
 rules for "where you can't omit semicolon". Following **Rule 3** we discard semicolons
 from our code. No problems so far :)
-
-#### `switch`
-
-Prefer `if` over `switch` by default.
 
 #### Currying
 
