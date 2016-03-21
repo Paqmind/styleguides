@@ -113,7 +113,7 @@ We recommend to use `==` where it's appropriate.
 
 #### Immutability
 
-You can divide solutions for this aspect into 7 (at least) groups.
+At least 7 approaches are possible here.
 
 ##### 1. Defensive copying
 
