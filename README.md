@@ -66,7 +66,11 @@ There are much more rules for "where you need to put semicolon" than
 rules for "where you can't omit semicolon". Following **Rule 3** we discard semicolons
 from our code. No problems so far :)
 
-#### Curry
+#### `switch`
+
+Prefer `if` over `switch` by default.
+
+#### Currying
 
 We use `curry` (with `=>`) as a replacement for `function` word almost everywhere.<br/>
 It's just a matter of reading / writing habits.
