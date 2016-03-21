@@ -150,7 +150,7 @@ Object.freeze({name: "Jack"})
 
 ##### 3. Auto freezing
 
-[seamless-immutable](https://github.com/rtfeldman/seamless-immutable)
+[**Seamless-Immutable**](https://github.com/rtfeldman/seamless-immutable)
 
 ```
 let xs = Immutable(["I'm", "immutable"]);
@@ -170,7 +170,7 @@ xs[0] = "let's verify" // error
 
 A builtin in functional languages (Haskell, Clojure...).
 
-[ImmutableJS](https://github.com/facebook/immutable-js)
+[**ImmutableJS**](https://github.com/facebook/immutable-js)
 
 ```js
 let map1 = Immutable.Map({a:1, b:2, c:3});
@@ -179,7 +179,7 @@ map1.get('b'); // 2
 map2.get('b'); // 50
 ```
 
-[Mori](https://github.com/swannodette/mori)
+[**Mori**](https://github.com/swannodette/mori)
 
 #### Benefits
 
@@ -195,7 +195,7 @@ map2.get('b'); // 50
 
 Some libraries can freeze data in addition to their primary actions (type validation, etc.). 
 
-[Tcomb](https://github.com/gcanti/tcomb)
+[**Tcomb**](https://github.com/gcanti/tcomb)
 
 ```js
 let Person = T.struct({
@@ -236,7 +236,7 @@ xs.push(4)
 
 ##### 7. Auto "just never mutate"
 
-[Ramda](http://ramdajs.com/)
+[**Ramda**](http://ramdajs.com/)
 
 ```js
 let xs = [1, 2, 3]
