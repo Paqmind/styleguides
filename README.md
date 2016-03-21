@@ -90,7 +90,7 @@ Rule of thumb: "named args" are for kids.
 #### Triple equals
 
 It's a commonplace to get advices like *always use `===`, never use `==`*. 
-So you'll see `typeof foo === "function"` like if `typeof` could return something besides `String`...
+So you'll see `typeof foo === "function"` like if `typeof` could return something besides `String`.
 It has become a dogma-like and dogmas generally make you a worse programmer.
 
 The thing is: you always need to think of types. Even in dynamic langs like JS. Than if something can be of unpredictable type (which is a warning by itself) you use manual type coercion (`String(x) == String(y)`). This is how you would behave in almost all other languages (**Rule 1** and **Rule 2**).
