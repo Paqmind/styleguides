@@ -235,6 +235,12 @@ xs.push(4)
 * clutter 
 * error-prone
 
+You can use [**eslint-plugin-immutable**](https://github.com/jhusain/eslint-plugin-immutable) plugin to discover mutable 
+operations at lint time.
+
+You can also use [**deep-freeze**](https://github.com/substack/deep-freeze) which install
+tests for mutation and asserts as your tests run. Obviously you need a good coverage ;)
+
 #### 7. "Just never mutate" (auto)
 
 [**Ramda**](http://ramdajs.com/)
@@ -255,3 +261,7 @@ let ys = drop(1, xs) // xs is untouched
 
 Our favorites are **5** and **7**. Try **4** when you have to deal with heavy memory load (games, graphics).
 Never use **1**.
+
+## Thanx to
+
+@SteveALee (suggestions for immutability section)
