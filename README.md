@@ -264,4 +264,4 @@ Never use **1**.
 
 ## Thanx to
 
-@SteveALee (suggestions for immutability section)
+[@SteveALee](https://github.com/SteveALee) (suggestions for immutability section)
