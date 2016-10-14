@@ -61,10 +61,10 @@ your priorities.
 Two statements for variable assignment violate **Rule 1**.<br/>
 `const` violates **Rule 2**, `let` – satisfies.
 
-### Double quote vs Single quote
+### Double quotes vs Single quotes
 
-Double quote is in-line with Haskell, Elm, Clojure conventions. Single quote is not.<br/>
-Following **Rule-2** we use double quote as default one. Single quote is used where it's convenient `"double-quoted-string"`.
+Double quote are in-line with Haskell, Elm, Clojure conventions. Single quotes are not.<br/>
+Following **Rule-2** we use double quotes as default one. Single quotes are used when it's convenient to avoid escaping.
 More arguments: http://michalzalecki.com/why-i-use-doublequotes-in-javascript/
 
 ### Semicolons
