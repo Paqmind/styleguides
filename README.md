@@ -65,6 +65,7 @@ Two statements for variable assignment violate **Rule 1**.<br/>
 
 Double quote is in-line with Haskell, Elm, Clojure conventions. Single quote is not.<br/>
 Following **Rule-2** we use double quote as default one. Single quote is used where it's convenient `"double-quoted-string"`.
+More arguments: http://michalzalecki.com/why-i-use-doublequotes-in-javascript/
 
 ### Semicolons
 
