@@ -112,4 +112,6 @@ loosing the whole picture.
 
 We recommend to use `==` where it's appropriate.
 
+## P.S.
 
+Check out my [Subjective Fullstack](https://github.com/ivan-kleshnin/subjective-fullstack) book.
