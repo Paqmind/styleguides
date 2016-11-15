@@ -61,6 +61,11 @@ your priorities.
 Two statements for variable assignment violate **Rule 1**.<br/>
 `const` violates **Rule 2**, `let` – satisfies.
 
+Other people on the same topic:
+* https://mathiasbynens.be/notes/es6-const#comment-32
+* https://mathiasbynens.be/notes/es6-const#comment-41
+* https://mathiasbynens.be/notes/es6-const#comment-42
+
 ### Double quotes vs Single quotes
 
 Double quote are in-line with Haskell, Elm, Clojure conventions. Single quotes are not.<br/>
