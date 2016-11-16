@@ -58,13 +58,23 @@ depending on them being overriden or not down the code. If you remove `if` which
 the latter to become `const`? If you have time to bother yourself with such things you probably need to reconsider
 your priorities. 
 
-Two statements for variable assignment violate **Rule 1**.<br/>
-`const` violates **Rule 2**, `let` – satisfies.
+`const` also can't help with function argument reassignments which are the core things that should not be reassigned.
+So, as every not-working palliative solution – we propose to ditch it.
+
+> But `const` implies intent!!!
+
+No it does not. All variables in JS are mutable. It does not mean that this "implies intent to mutate them", right?
+
+To underline: 
+* multiple types of variable assignments violate **Rule 1**.<br/>
+* `const` violates **Rule 2**, `let` – satisfies.
 
 Other people on the same topic:
 * https://mathiasbynens.be/notes/es6-const#comment-32
 * https://mathiasbynens.be/notes/es6-const#comment-41
 * https://mathiasbynens.be/notes/es6-const#comment-42
+
+Yehuda Katz is not a fan of const [as well](https://twitter.com/wycats/status/798710635743748096).
 
 ### Double quotes vs Single quotes
 
