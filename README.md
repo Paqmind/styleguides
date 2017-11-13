@@ -54,20 +54,18 @@ if (flag) {
 ```
 
 So your code **will** contain `let` statemets anyway. It's noisy and inconsistent to declare variables
-depending on them being overriden or not down the code. If you remove `if` which forced you to use `let` will you update
+depending on them being overriden or not somewhere down the code. If you remove `if` which forced you to use `let`, will you update
 the latter to become `const`? If you have time to bother yourself with such things you probably need to reconsider
 your priorities. 
 
 `const` also can't help with function argument reassignments which are the core things that should not be reassigned.
 So, as every not-working palliative solution – we propose to ditch it.
 
-> But `const` implies intent!!!
-
-No it does not. All variables in JS are mutable. It does not mean that this "implies intent to mutate them", right?
-
 To underline: 
 * multiple types of variable assignments violate **Rule 1**.<br/>
 * `const` violates **Rule 2**, `let` – satisfies.
+
+Variable reassignment are easy to manage and debug because their effect is scoped (unlike mutations).
 
 Other people on the same topic:
 * https://mathiasbynens.be/notes/es6-const#comment-32
@@ -80,6 +78,7 @@ Yehuda Katz is not a fan of const [as well](https://twitter.com/wycats/status/79
 
 Double quote are in-line with Haskell, Elm, Clojure conventions. Single quotes are not.<br/>
 Following **Rule-2** we use double quotes as default one. Single quotes are used when it's convenient to avoid escaping.
+With double quotes, it's easier to convert data from JS to JSON and vice-versa.
 More arguments: http://michalzalecki.com/why-i-use-doublequotes-in-javascript/
 
 ### Semicolons
