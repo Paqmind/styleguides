@@ -104,27 +104,24 @@ Rule of thumb: "named args" are for kids.
 
 ### Triple equals
 
-It's a commonplace to get advices like *always use `===`, never use `==`*. 
-So you'll see `typeof foo === "function"` like if `typeof` could return something besides `String`.
-It has become a dogma-like and dogmas generally make you a worse programmer.
+It's almost a mantra in JS community to *always use `===`, insead of `==`*. 
+So you'll often see `typeof foo === "function"` like if `typeof` could suddenly return non-string value.
+Almost noone questions this rule. Well, let's discuss it here.
 
-The thing is: you always need to think of types. Even in dynamic langs like JS. Than if something can be of unpredictable type (which is a warning by itself) you use manual type coercion (`String(x) == String(y)`). This is how you would behave in almost all other languages (**Rule 1** and **Rule 2**).
+Do you really think the following should  return `false`?
 
-Comparison rules in JS are fundamentally broken (in mathematical sense). 
-
-```js
-[] == []  // false
-[] === [] // false
+```
+"1" == 1
 ```
 
-You totally can't fix that fact by "always use `===`" rule. Like previously mentioned palliatives (`const`)
-this one pushes you into "safety" mindset which is a self deceit.
+Personally, I would say both `true` and `false` results aren't good. It's not that `"1"` and `1` aren't equal. It's that
+you shouldn't compare values of different types unless you're ok with their auto-coercion. The thing is: you always need to think of types. This is how you would behave in almost all other languages (**Rule 1** and **Rule 2**). 
 
-Besides that. There are no strict equivalents for `>`, `>=`, `<`, `<=`. 
-Being simple, consistent and language agnostic is always better than trumpeting minor details
-loosing the whole picture.
+Then I can tell you, from my own  JS experience (spanning 5+ years) that I has exactly ZERO bugs caused by `==`. Just like with `let` used "instead of" `const`. And practice is one of the best truth criterias we have.
 
-We recommend to use `==` where it's appropriate.
+And besides that, there are no strict equivalents for `>`, `>=`, `<`, `<=`. Do you people complaining about that? Meh, no.
+
+Ditto: we recommend to use `==` whenever it's appropriate (most of the time, if you don't mess types).
 
 ## P.S.
 
