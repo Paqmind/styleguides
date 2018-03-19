@@ -6,15 +6,15 @@ Preconfigured [.eslintrc](https://gist.github.com/ivan-kleshnin/5e71698b8179ee18
 
 Nothing here is a dogma. We keep an option to reconsider everything as we discover more arguments.
 
-### Rule 1
+#### Rule 1
 
 Write and style code in a language-agnostic way. Portability of knowledge and reading / writing skills is a goal.
 
-### Rule 2
+#### Rule 2
 
 Dealing with choice in **Rule 1**, prefer syntax and semantics of better languages (Haskell, etc.).
 
-### Rule 3
+#### Rule 3
 
 Avoid complicated grammar rules.
 
