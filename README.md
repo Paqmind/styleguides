@@ -1,6 +1,6 @@
-# Styleguides
+# Paqmind styleguides
 
-Relevant topics. Discuss and compare different approaches to backup our choices.
+Preconfigured [.eslintrc](https://gist.github.com/ivan-kleshnin/5e71698b8179ee18cd80616a3e2305f1).
 
 ## Rules
 
