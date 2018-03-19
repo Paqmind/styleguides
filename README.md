@@ -2,7 +2,7 @@
 
 Preconfigured [.eslintrc](https://gist.github.com/ivan-kleshnin/5e71698b8179ee18cd80616a3e2305f1).
 
-## Rules
+### Rules
 
 Nothing here is a dogma. We keep an option to reconsider everything as we discover more arguments.
 
@@ -18,13 +18,13 @@ Dealing with choice in **Rule 1**, prefer syntax and semantics of better languag
 
 Avoid complicated grammar rules.
 
-## Applications
+### Applications
 
-### `if` vs `switch`
+#### `if` vs `switch`
 
 Prefer `if` over `switch` by default.
 
-### `let` vs `const`
+#### `let` vs `const`
 
 `const` implies immutability which it does not provide (so lies)
 
@@ -74,20 +74,20 @@ Other people on the same topic:
 
 Yehuda Katz is not a fan of const [as well](https://twitter.com/wycats/status/798710635743748096).
 
-### Double quotes vs Single quotes
+#### Double quotes vs Single quotes
 
 Double quote are in-line with Haskell, Elm, Clojure conventions. Single quotes are not.<br/>
 Following **Rule-2** we use double quotes as default one. Single quotes are used when it's convenient to avoid escaping.
 With double quotes, it's easier to convert data from JS to JSON and vice-versa.
 More arguments: http://michalzalecki.com/why-i-use-doublequotes-in-javascript/
 
-### Semicolons
+#### Semicolons
 
 There are much more rules for "where you need to put semicolon" than 
 rules for "where you can't omit semicolon". Following **Rule 3** we discard semicolons
 from our code. No problems so far :)
 
-### Currying
+#### Currying
 
 We use `curry` (with `=>`) as a replacement for `function` word almost everywhere.<br/>
 It's just a matter of reading / writing habits.
@@ -102,7 +102,7 @@ you'll never want to go that way.
 
 Rule of thumb: "named args" are for kids.
 
-### Triple equals
+#### Triple equals
 
 It's almost a mantra in JS community to *always use `===`, insead of `==`*. 
 So you'll often see `typeof foo === "function"` like if `typeof` could suddenly return non-string value.
@@ -123,6 +123,6 @@ And besides that, there are no strict equivalents for `>`, `>=`, `<`, `<=`. Do y
 
 Ditto: we recommend to use `==` whenever it's appropriate (most of the time, if you don't mess types).
 
-## P.S.
+### P.S.
 
 Check out my [Subjective Fullstack](https://github.com/ivan-kleshnin/subjective-fullstack) book.
