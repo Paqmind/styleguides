@@ -1,6 +1,6 @@
 # Paqmind styleguides
 
-Preconfigured [.eslintrc](https://gist.github.com/ivan-kleshnin/5e71698b8179ee18cd80616a3e2305f1).
+Preconfigured [.eslintrc](https://gist.github.com/ivan-kleshnin/af5dad2083bd777e94e69c6384aba753).
 
 ### Rules
 
